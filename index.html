@@ -1,0 +1,270 @@
+<!-- 
+    26/1/2022
+    - modificaciones en CSS para ajuste a dispositivos moviles
+    - modificacion de colores de textos de parafos a gris claro
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>novaware - Automatización industrial</title>
+</head>
+<body>
+    <!-- Encabezado con enlaces internos a las secciónes -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="index.html"><strong>novaware</strong></a>
+        </div>
+        <nav class="menu">
+            <label for="menu-toggle">
+               <i class="fas fa-bars"></i>
+            </label>      
+            <input type="checkbox" id="menu-toggle" />
+            <ul id="menu-lista"> 
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+         
+         </nav>
+    </header>
+<!-- Sección Inicio -->
+    <section id="inicio">
+        <div class="paralax">
+            <div class="wellcome">
+                <h1>novaware</h1>
+                <p>Automatización y control industrial</p>
+            </div>
+        </div>
+    </section> <!-- Fin sección Inicio -->
+<!-- Sección Nosotros-->
+    <section id="nosotros" class="nosotros-container">
+        <!-- Título de la sección -->
+        <div class="nosotros-titulo">
+            <h2>Acerca de Nosotros</h2> 
+            <p>
+                novaware es una empresa formada por profesionales con más de 15 años de experiencia
+                en procesos de automatización para la industria de alimentos y bebidas.
+            </p>
+        </div>
+
+        <div class = "nosotros-items-container">
+            <!-- Objetivos -->
+            <div class="nosotros-item nosotros-item-objetivos">
+                <h3>OBJETIVOS</h3>
+                <p>
+                    Proveer tecnologías y servicios en las áreas de control de procesos industriales, 
+                    automatización industrial y tecnología de información buscando 
+                    permanentemente la diferenciación por la calidad del servicio 
+                    y la satisfacción del cliente.
+                </p>
+            </div>
+
+            <!-- Misión -->
+            <div class="nosotros-item nosotros-item-mision">
+                <h3>MISION</h3>
+                <p>
+                    Brindar soluciones de ingeniería con alto valor agregado a través de las cuales 
+                    lograr ser reconocidos y aceptados por el aporte que generan para nuestros clientes. 
+                    Mejorar continuamente la calidad de nuestros servicios y productos, desarrollándonos 
+                    en un entorno profesional de negocios que asegure la evolución económica de largo plazo, 
+                    en un clima de trabajo cordial que fomente la creatividad, el respeto por la ética comercial 
+                    y por los valores humanos.
+                </p>
+            </div>
+
+            <!-- Visión -->
+            <div class="nosotros-item nosotros-item-vision">
+                <h3>VISION</h3>
+                <p>
+                    Ser una empresa líder en la provisión de servicios especializados y soluciones tecnológicas, 
+                    a la cual se reconozca y elija como socio tecnológico de sus clientes.
+                </p>
+            </div>
+        </div>
+    </section> 
+    <!-- Fin Sección Acerca de Nosotros-->
+
+    <!-- Sección Soluciones Tecnológicas -->
+    <section id="soluciones" class="soluciones-container">
+        <!-- Título de sección -->
+        <h2>Soluciones tecnológicas</h2>
+
+        <div class="soluciones-items-container">
+            <!-- Automatismos llave en mano -->
+            <div class="soluciones-item soluciones-item-1">
+                <!-- verificar imagen con derechos de autor -->
+                <img src="./src/assets/img/llave-en-mano.jpeg" alt="Soluciones tecnológicas. Automatismos llave en mano">
+                <p>Automatismos llave en mano</p>
+            </div>
+
+            <!-- Ingeniería eléctrica -->
+            <div class="soluciones-item soluciones-item-2">
+                <!-- verificar imagen con derechos de autor -->
+                <img src="./src/assets/img/ingenieria-electrica.jpeg" alt="Soluciones tecnológicas. Ingeniería eléctrica">
+                <p>Ingeniería eléctrica</p>
+            </div>
+
+            <!-- Construcción de tableros eléctricos -->
+            <div class="soluciones-item soluciones-item-3">
+                <!-- cambiar imagen por una propia -->
+                <img src="./src/assets/img/construccion-tableros.jpeg" alt="Soluciones tecnológicas. Construcción de tableros eléctricos">
+                <p>Construcción de tableros eléctricos</p>
+            </div>   
+
+            <!-- Integración de sistema de control de procesos y tecnología de información -->
+            <div class="soluciones-item soluciones-item-4">
+                <!-- cambiar imagen por una imagen mas completa -->
+                <img src="./src/assets/img/OEE.png" alt="Soluciones tecnológicas. Integración de sistema de control de procesos y tecnología de información">
+                <p>
+                    Integración de sistema de control de 
+                    procesos y tecnología de información
+                </p>
+            </div> 
+
+            <!-- Programación de PLC, HMI, SCADA y Gestores de procesos batch -->
+            <div class="soluciones-item soluciones-item-5">
+                <!-- cambiar imagen por una imagen mas completa -->
+                <img src="./src/assets/img/programacion.png" alt="Soluciones tecnológicas. Programación de PLC, HMI, SCADA y Gestores de procesos batch">
+                <p>
+                    Programación de PLC, HMI, SCADA y 
+                    Gestores de procesos batch
+                </p>
+            </div>
+        </div>
+
+    </section> 
+    <!-- Fin Sección Soluciones-->
+
+    <!-- Sección Ultimos proyectos -->
+    <section id="proyectos" class="ultimos-proyectos-container">
+        <!-- Título de sección -->
+            <h2>Últimoms Proyectos</h2>      
+        <div class="ultimos-proyectos-items-container">
+            <!-- VER LA POSIBILIDAD DE PONER UN VINCULO PARA ABRIR UNA VISTA AMPLIADA PARA LA DESCRIPCION DEL PROYECTO-->
+            <!-- Migración de extrusor Buhler -->
+            <div class="ultimos-proyectos-item ultimos-proyectos-item-1">
+                <img src="./src/assets/img/extrusor-genser.png" alt="Últimoms proyectos. Migración extrusor">
+                <p>
+                    Migración de extrusor Buhler - 
+                    General Cereals, Luján, Bs. As.
+                </p>
+            </div> 
+
+            <!-- Programación de planta Gran Vía -->
+            <div class="ultimos-proyectos-item ultimos-proyectos-item-2">
+                <img src="./src/assets/img/gran-via.png" alt="Últimoms proyectos. Programación de planta de cerveza Gran Vía">
+                <p>
+                    Programación y puesta en marcha
+                    de planta de producción de cerveza.
+                    Alcalá de Guadaira, Sevilla, España.
+                </p>
+            </div> 
+
+            <!-- Programación sala de BBTs CCU -->
+            <div class="ultimos-proyectos-item ultimos-proyectos-item-3">
+                <img src="./src/assets/img/bbts-ccu.png" alt="Últimoms proyectos. Programación de sala de BBTs CCU">
+                <p>
+                    Programación de sala 
+                    de BBTs CCU, Luján, Bs. As.
+                </p>
+            </div> 
+        </div>
+    </section> <!-- Fin sección últimos proyectos -->
+
+    <!-- Sección Clientes-->
+    <section id="clientes" class="clientes-container">
+         <!-- Título de seccón -->
+            <h2>Algunos de nuestros clientes</h2>
+
+        <div class="clientes-items-container">
+            <!-- Cliente CCU-->
+            <div class="clientes-item clientes-item-1">
+                <img src="./src/assets/img/logo-cliente-ccu.png" alt="Clientes - Logo CCU Argentina">
+            </div>
+
+            <!-- Cliente Eco de Los Andes-->
+            <div class="clientes-item clientes-item-2">
+                <img src="./src/assets/img/logo-cliente-eco.jpeg" alt="Clientes - Logo Eco de Los Andes">
+            </div>
+
+            <!-- Cliente General Cereals-->
+            <div class="clientes-item clientes-item-3">
+                <img src="./src/assets/img/logo-cliente-gencer.png" alt="Clientes - Logo General Cereals">
+            </div>
+
+            <!-- Cliente Indupoles-->
+            <div class="clientes-item clientes-item-4">
+                <img src="./src/assets/img/logo-cliente-indupoles.jpeg" alt="Clientes - Logo Indupoles">
+            </div>
+
+            <!-- Cliente Logística La Serenísima-->
+            <div class="clientes-item clientes-item-5">
+                <img src="./src/assets/img/logo-cliente-llssa.jpeg" alt="Clientes - Logo Logística La Serenísima">
+            </div>
+
+            <!-- Cliente Nestlé Waters -->
+            <div class="clientes-item clientes-item-6">
+                <img src="./src/assets/img/logo-cliente-nestle.jpeg" alt="Clientes - Logo Nestlé Waters">
+            </div>  
+
+            <!-- Cliente CMQ -->
+            <div class="clientes-item clientes-item-7">
+                <img src="./src/assets/img/logo-cliente-quilmes.jpeg" alt="Clientes - Logo Cervecería y Maltería Quilmes">
+            </div> 
+            
+            <!-- Cliente Saint-Gobain -->
+            <div class="clientes-item clientes-item-8">
+                <img src="./src/assets/img/logo-cliente-saint-gobain.png" alt="Clientes - Logo Saint Gobain">
+            </div> 
+
+            <!-- Cliente SPI -->
+            <div class="clientes-item clientes-item-9">
+                <img src="./src/assets/img/logo-cliente-spi.jpeg" alt="Clientes - Logo Sanitary Process Intagration">
+            </div> 
+        </div>
+    </section> <!-- Fin de sección Clientes -->
+
+    <!-- Sección Contáctenos -->
+    <section id="contacto" class="contacto-container">
+        <!-- Título de sección -->
+        <h2>CONTÁCTENOS</h2>
+            
+        <div class="contacto-form-container">
+            <!-- Logo, correo y teléfono -->
+            <div class="contacto-info">
+                <img src="./src/assets/img/logonovaware.png" alt="Contáctenos - Logo novaware ">
+                <p><strong>email:</strong> info@novaware.com.ar</p>
+                <p><strong>cel:</strong>+5492323578823</p>
+            </div>
+            <form class="contacto-form" action="" method="post">
+                <input class="contacto-form-nombre" name="name" type="text" placeholder="Ingrese su nombre">
+                <input class="contacto-form-email" name="email" type="text" placeholder="Ingrese su email">
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-texto">
+            <p>©2021 NovaWare - Todos los derechos reservados</p>
+            <p>HRG Desarrollos</p>
+        </div>
+
+    </footer>
+</body>
+</html>
