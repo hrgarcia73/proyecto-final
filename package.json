@@ -1,7 +1,7 @@
 {
   "name": "trabajo-final",
   "version": "1.0.0",
-  "description": "",
+  "description": "Trabajo final de curso de desarrollador web Coderhouse",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/hrgarcia73/proyecto-final.git"
   },
-  "author": "",
+  "author": "Héctor Ricardo García",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hrgarcia73/proyecto-final/issues"
