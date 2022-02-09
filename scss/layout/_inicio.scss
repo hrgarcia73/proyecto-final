@@ -1,51 +1,55 @@
 
 /* Seccion inicio */
-.paralax{
-    position: relative;
-    /* 100% del ancho de la pantalla */
-    width: 100%;
-    /* Antes tenía 100% del viewport (alto de la vista de la ventana), 
-       con la corrección de Felipe le ponemos height: auto
-    */
-    height: auto;
-    /* Imagen de fondo*/
-    background-image: url("../src/assets/img/carrousel-1.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
+.inicio{
+    
+    .paralax{
+        position: relative;
+        /* 100% del ancho de la pantalla */
+        width: 100%;
+        /* Antes tenía 100% del viewport (alto de la vista de la ventana), 
+        con la corrección de Felipe le ponemos height: auto
+        */
+        height: auto;
+        /* Imagen de fondo*/
+        background-image: url("../src/assets/img/carrousel-1.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
 
-    .wellcome{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-        padding: 30rem 0;
+        .wellcome{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            padding: 30rem 0;
 
-        h1{
-            .titulo{
-            /*
-                Para SEO elimino el parrafo y coloco todo en el h1.
-                para poder dar estilos diferentes a los dos textos 
-                utilizo dos etiquetas span con diferentes clases,
-                titulo y descripcion 
-            */
-                display: block;
-                font-family: $font-welcome;
-                font-size: $size-text-wellcome-h1;
-                color: #fff;
-                text-align: center; 
+            h1{
+                .titulo{
+                /*
+                    Para SEO elimino el parrafo y coloco todo en el h1.
+                    para poder dar estilos diferentes a los dos textos 
+                    utilizo dos etiquetas span con diferentes clases,
+                    titulo y descripcion 
+                */
+                    display: block;
+                    font-family: $font-welcome;
+                    font-size: $size-text-wellcome-h1;
+                    color: #fff;
+                    text-align: center; 
+                }
+                .descripcion{
+                    display: block;
+                    font-family: $font-welcome;
+                    font-size: $size-text-wellcome-p;
+                    font-weight: 300;
+                    color: #fff;
+                    margin-top: 1%;
+                    text-align: center;                
+                }
+
             }
-            .descripcion{
-                font-family: $font-welcome;
-                font-size: $size-text-wellcome-p;
-                font-weight: 300;
-                color: #fff;
-                margin-top: 1%;
-                text-align: center;                
-            }
-
         }
     }
 }

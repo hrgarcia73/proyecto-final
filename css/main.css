@@ -37,11 +37,16 @@ Se utilizó:
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 /* Elimino los scrollbar*/
 ::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  background-color: brown;
 }
 
 /*
@@ -101,6 +106,7 @@ html {
   /* con esto conseguí que se ponga el menú al lado del logo */
   align-items: center;
   /* Con esto consigo que se centren*/
+  width: 100%;
 }
 .header .menu ul {
   margin: 0%;
@@ -195,12 +201,12 @@ html {
 }
 
 /* Seccion inicio */
-.paralax {
+.inicio .paralax {
   position: relative;
   /* 100% del ancho de la pantalla */
   width: 100%;
   /* Antes tenía 100% del viewport (alto de la vista de la ventana), 
-     con la corrección de Felipe le ponemos height: auto
+  con la corrección de Felipe le ponemos height: auto
   */
   height: auto;
   /* Imagen de fondo*/
@@ -210,7 +216,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.paralax .wellcome {
+.inicio .paralax .wellcome {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -218,7 +224,7 @@ html {
   justify-content: center;
   padding: 30rem 0;
 }
-.paralax .wellcome h1 .titulo {
+.inicio .paralax .wellcome h1 .titulo {
   /*
       Para SEO elimino el parrafo y coloco todo en el h1.
       para poder dar estilos diferentes a los dos textos 
@@ -231,7 +237,8 @@ html {
   color: #fff;
   text-align: center;
 }
-.paralax .wellcome h1 .descripcion {
+.inicio .paralax .wellcome h1 .descripcion {
+  display: block;
   font-family: roboto;
   font-size: 2rem;
   font-weight: 300;
