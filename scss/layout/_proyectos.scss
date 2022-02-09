@@ -1,0 +1,102 @@
+/* Seccion ultimos proyectos */
+.ultimos-proyectos-container{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+    
+    h2{
+        font-family: $font-sections;
+        font-size: $size-text-sections;
+        color: $text-color-section; 
+        text-align: center;
+        margin-top: 5%;
+
+        @media only screen and (max-width: 768px) {
+            /* Ajuste de tamaño para distintas resoluciones*/
+            /* Telefono */
+                font-size: 2.5rem;
+        }
+    }
+    .ultimos-proyectos-items-container{
+        width: 90%;
+        margin-top: 7%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+
+        @media only screen and (max-width: 1024px) {
+            /* Ajuste de tamaño para distintas resoluciones*/
+            /* Tablet */
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .ultimos-proyectos-item-1{
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+        }
+        .ultimos-proyectos-item-2{
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+        }
+        .ultimos-proyectos-item-3{
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */
+                grid-row: 3 / 4;
+                grid-column: 1 / 2;               
+            }
+        }
+
+        .ultimos-proyectos-item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            img{
+                width: 350px;
+                height: 250px;
+                border-bottom-left-radius: 20%;
+                border-top-right-radius: 20%;
+            }
+
+            p {
+                font-family: $font-sections;
+                font-size: $size-text-descriptions;
+                color: $text-color-descriptions;
+                text-align: center;
+                margin-top: 1rem;
+                width: 350px;
+            }
+        }
+    }
+}
+
+/* Fin seccion ultimos proyectos */

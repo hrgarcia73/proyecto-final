@@ -1,0 +1,197 @@
+/* Seccion Clientes */
+.clientes-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+
+    h2{
+        font-family: $font-sections;
+        font-size: $size-text-sections;
+        color: $text-color-section; 
+        text-align: center;
+        padding: 5% 0;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+            
+    }
+    .clientes-items-container{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 30px; 
+        margin-top: 4%;
+        margin-bottom: 4%;
+        justify-items: center;
+        @media only screen and (max-width: 1024px) {
+            /* Ajuste de tamaño para distintas resoluciones*/
+            /* Tablet */            
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+        }
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(10,1fr);
+        }
+
+        .clientes-item-1{
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-2{
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-3{
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 1 / 2;
+                grid-column: 3 / 4;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 3 / 4;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-4{
+            grid-row: 1 / 2;
+            grid-column: 4 / 5;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 4 / 5;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-5{
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 5 / 6;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-6{
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 2 / 3;
+                grid-column: 3 / 4;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 6 / 7;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-7{
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 3 / 4;
+                grid-column: 1 / 2;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 7 / 8;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-8{
+            grid-row: 2 / 3;
+            grid-column: 4 / 5;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 3 / 4;
+                grid-column: 2 / 3;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 8 / 9;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item-9{
+            grid-row: 3 / 4;
+            grid-column: 2 / 3;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */            
+                grid-row: 3 / 4;
+                grid-column: 3 / 4;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Telefono */            
+                grid-row: 9 / 10;
+                grid-column: 1 / 2;
+            }
+        }
+        .clientes-item{
+            img{
+                width: 150px;
+                height: 80px; 
+            }
+
+        }
+    }
+}
+/* Fin seccion Clientes */

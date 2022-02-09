@@ -1,0 +1,81 @@
+/* Seccion Contacto */
+.contacto-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+
+    h2{
+        font-family: $font-sections;
+        font-size: $size-text-sections;
+        color: $text-color-section; 
+        text-align: center;
+        margin-top: 2%;
+
+        @media only screen and (max-width: 768px){
+            font-size: 2.5rem;
+        }
+    }
+
+    .contacto-form-container{
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 3%;
+
+        .contacto-info{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            border-bottom: #929497 solid 2px;
+            padding-bottom: 1%;
+
+            img{
+                width: 300px;
+                height: 80px;
+                margin-bottom: 1%;
+
+                @media only screen and (max-width: 768px){
+                        width: 212px;
+                        height: 59px;
+                }
+            }
+
+            p{
+                font-family: $font-sections;
+                font-size: $size-text-descriptions;
+            }
+        }
+
+        .contacto-form{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 2% 0;
+
+            input{
+                margin: 1% 0;
+                font-family: $font-sections;
+                font-size: $size-text-descriptions;
+                height: 30px;
+                border: solid  #f58634 2px;
+                color: black;
+            }
+
+            textarea{
+                margin: 1% 0;
+                font-family: $font-sections;
+                font-size: $size-text-descriptions;
+                height: 100px;
+                border: solid  #f58634 2px;
+                color: black;
+            }
+        }
+    }
+}
+/* Fin seccion Contacto */

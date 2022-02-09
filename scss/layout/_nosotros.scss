@@ -1,0 +1,96 @@
+/* Seccion Nosotros */
+.nosotros-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    padding-bottom: 20%;
+
+    .nosotros-titulo {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 10%;
+
+        h2{
+            font-family: $font-sections;
+            font-size: $size-text-sections;
+            color: $text-color-section; 
+            border-top: #f58634 solid 2px;
+            border-bottom: #f58634 solid 2px ;
+            width: 80%; /* Es el 80% del contenedor padre*/
+            text-align: center;
+        }
+        p{
+            font-family: $font-sections;
+            font-size: 1.3rem;
+            color: $text-color-descriptions;
+            text-align: center;
+            margin-top: 2%;
+        }
+    }
+
+    .nosotros-items-container{
+        width: 90%;
+        margin-top: 2%; 
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 25px; /* Espacio entre celdas*/
+
+        @media only screen and (max-width: 1024px) {
+            /* Ajuste de tamaño para distintas resoluciones*/
+            /* Tablet */
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3,1fr);
+            
+        } 
+
+        @media only screen and (max-width: 768px) {
+            /* Telefono */
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3,1fr);
+
+            .nosotros-titulo h2{
+                font-size: 2rem;
+            }
+        } 
+
+        .nosotros-item{
+            width: 100%;
+            display: flex;
+            justify-content:flex-start;
+            align-items:center;
+            flex-direction: column;
+            flex-wrap: wrap; 
+            margin: 1%;
+            border-bottom: #f58634 solid 1px;
+            padding-bottom: 1%;
+            padding-top: 3%;
+
+            h3{
+                font-family: $font-sections;
+                font-size: 1.5rem;
+                text-align: center;
+                color:  #f58634;
+                border-top: #929497 solid 1px;
+                border-bottom: #929497 solid 1px;
+                margin-bottom: 5%;
+                width: 100%;
+            }
+            p {
+                font-family: $font-sections;
+                font-size: $size-text-descriptions;
+                text-align:left; 
+                color: $text-color-descriptions;
+            }
+        }
+
+    }
+}
+/* Fin seccion Nosotros */
+

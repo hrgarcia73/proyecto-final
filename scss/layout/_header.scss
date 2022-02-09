@@ -1,0 +1,123 @@
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    height: 60px;
+    background-color: $bg-color-header;
+    border-bottom: solid  #f58634 5px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    .header-logo {
+        a{
+            font-family: $font-logo;
+            font-size: $size-text-logo;
+            padding-top: 15px;
+            padding-left: 20px;
+            text-decoration: none;
+            color: $text-color-logo;
+            /* ajuste para baja resolucion*/
+            @media only screen and (max-width: 760px) {
+                padding-left: 60px;
+            }
+        }
+    }
+
+    .menu{
+        display: flex;  /* con esto conseguí que se ponga el menú al lado del logo */
+        align-items: center; /* Con esto consigo que se centren*/
+        ul{
+            margin: 0%;
+            list-style: none;
+            padding: 0%;
+            
+            @media only screen and (max-width: 760px) {
+                /* ajuste para baja resolucion*/
+                display: flex;
+                position: absolute; 
+                flex-direction: column;
+                top:65px;
+                left: 0;
+                background-color:#837c7c;
+                opacity: 0.9;
+                padding: 0px;
+                margin: 0px;
+                margin-left: -70%;
+                transition: all 0.7s;
+                width: 50%;
+            }
+
+            li {
+                /* modifico los li para que queden uno al lado del otro*/
+                display: inline; 
+                /* ajuste para baja resolucion*/
+                @media only screen and (max-width: 760px) {
+                    border-bottom: 1px solid #fff;
+                }
+                a{
+                    /* Elimino el subrayado por defecto*/
+                    text-decoration: none;
+                    font-family: $font-links;
+                    font-size: $size-text-links;
+                    color: $text-color-links;
+                    padding: 8px 20px;
+                    border-radius: 6px;
+                    /* transition es para el tiempo de cambio de color en el hover*/
+                    transition: 0.5s;
+
+                    /* efecto hover de enlaces*/
+                    &:hover{
+                        /* Efecto para que cuando el puntero para por el link, 
+                           este cambie de color
+                        */
+                        background-color: #f58634;
+                        color: #fff;
+                    } 
+                    /* ajuste para baja resolucion*/
+                    @media only screen and (max-width: 760px) {
+                        display: block;
+                        padding: 15px 20px;
+                        font-size: 1.5rem;
+                        border-radius: 0%;
+                        text-align: center;
+                    } 
+                }
+            }
+        }
+    }
+
+    /* boton menu resposive*/
+    label{  
+        cursor: pointer;
+        display: none;
+        width: 28px;
+        height: 28px;
+        padding: 8px;
+        font-size: 2rem;
+        color: #f58634;
+        position: fixed;
+        top: 8px;
+        left:5px;
+
+        /*efecto hover para el boton del menu responsive*/
+        &:hover{
+            color: rgba(172, 182, 185, 0.3);
+         }
+         /* ajuste para baja resolucion*/
+         @media only screen and (max-width: 760px) {
+            display: block;
+        }
+     }
+     /*checkbox para el estado del menu resposive*/
+     #menu-toggle{
+        display: none;
+
+        @media only screen and (max-width: 760px) {
+            &:checked + #menu-lista{
+                margin-left: 0%;
+            }
+        }
+     }
+ }

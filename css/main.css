@@ -1,0 +1,938 @@
+@charset "UTF-8";
+/*
+    Esquema de carpetas usado para sass. 
+
+|– main.sass              // Archivo principal
+|
+|– utilities/
+|   |– _variables.sass    // Variables
+|   |– _functions.sass    // Funciones /no se utilizó ninguna funcions
+|
+|– base/
+|   |– _reset.sass        // Reset/normalize
+|   |– _Tipography.sass   // Tipografias
+|
+|– layout/
+    |– _header.sass       // Header
+    |– _inicio.sass       // Seccion inicio
+    |– _nosotros.sass     // Seccion nosotros
+    |– _soluciones.sass   // Seccion soluciones
+    |– _proyectos.sass    // Seccion proyectos
+    |– _clientes.sass     // Seccion clientes
+    |– _contacto.sass     // Seccion contacto
+    |– _footer.sass       // Footer
+
+Se utilizó:
+ - Anidamiento
+ - variables
+ - Partial
+*/
+/*
+    En este partial se realizan los resets de los estilos por
+    defecto
+*/
+/* Reset de valores predeterminados */
+@import url("https://fonts.googleapis.com/css2?family=Mohave&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Elimino los scrollbar*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*
+    Definicion de funetes del proyecto
+*/
+/* Fuentes */
+/* defino el tamaño de fuente para mi html 
+para despues usar rem en las font-size*/
+html {
+  font-size: 16px;
+}
+
+/*
+    Definicion de variables globales para colores de texto,
+    tipos de fuente y tamaño
+*/
+/*
+    Definicion de variable que contienen
+    los colores
+*/
+/*
+    Definicion de tipos de fuentes
+*/
+/*
+    Definicion de tamaños de fuentes
+*/
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: #333333;
+  border-bottom: solid #f58634 5px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  /* boton menu resposive*/
+  /*checkbox para el estado del menu resposive*/
+}
+.header .header-logo a {
+  font-family: "Mohave", sans-serif;
+  font-size: 3rem;
+  padding-top: 15px;
+  padding-left: 20px;
+  text-decoration: none;
+  color: #f58634;
+  /* ajuste para baja resolucion*/
+}
+@media only screen and (max-width: 760px) {
+  .header .header-logo a {
+    padding-left: 60px;
+  }
+}
+.header .menu {
+  display: flex;
+  /* con esto conseguí que se ponga el menú al lado del logo */
+  align-items: center;
+  /* Con esto consigo que se centren*/
+}
+.header .menu ul {
+  margin: 0%;
+  list-style: none;
+  padding: 0%;
+}
+@media only screen and (max-width: 760px) {
+  .header .menu ul {
+    /* ajuste para baja resolucion*/
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 65px;
+    left: 0;
+    background-color: #837c7c;
+    opacity: 0.9;
+    padding: 0px;
+    margin: 0px;
+    margin-left: -70%;
+    transition: all 0.7s;
+    width: 50%;
+  }
+}
+.header .menu ul li {
+  /* modifico los li para que queden uno al lado del otro*/
+  display: inline;
+  /* ajuste para baja resolucion*/
+}
+@media only screen and (max-width: 760px) {
+  .header .menu ul li {
+    border-bottom: 1px solid #fff;
+  }
+}
+.header .menu ul li a {
+  /* Elimino el subrayado por defecto*/
+  text-decoration: none;
+  font-family: "Mohave", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  /* transition es para el tiempo de cambio de color en el hover*/
+  transition: 0.5s;
+  /* efecto hover de enlaces*/
+  /* ajuste para baja resolucion*/
+}
+.header .menu ul li a:hover {
+  /* Efecto para que cuando el puntero para por el link, 
+     este cambie de color
+  */
+  background-color: #f58634;
+  color: #fff;
+}
+@media only screen and (max-width: 760px) {
+  .header .menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    border-radius: 0%;
+    text-align: center;
+  }
+}
+.header label {
+  cursor: pointer;
+  display: none;
+  width: 28px;
+  height: 28px;
+  padding: 8px;
+  font-size: 2rem;
+  color: #f58634;
+  position: fixed;
+  top: 8px;
+  left: 5px;
+  /*efecto hover para el boton del menu responsive*/
+  /* ajuste para baja resolucion*/
+}
+.header label:hover {
+  color: rgba(172, 182, 185, 0.3);
+}
+@media only screen and (max-width: 760px) {
+  .header label {
+    display: block;
+  }
+}
+.header #menu-toggle {
+  display: none;
+}
+@media only screen and (max-width: 760px) {
+  .header #menu-toggle:checked + #menu-lista {
+    margin-left: 0%;
+  }
+}
+
+/* Seccion inicio */
+.paralax {
+  position: relative;
+  /* 100% del ancho de la pantalla */
+  width: 100%;
+  /* Antes tenía 100% del viewport (alto de la vista de la ventana), 
+     con la corrección de Felipe le ponemos height: auto
+  */
+  height: auto;
+  /* Imagen de fondo*/
+  background-image: url("../src/assets/img/carrousel-1.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.paralax .wellcome {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 30rem 0;
+}
+.paralax .wellcome h1 .titulo {
+  /*
+      Para SEO elimino el parrafo y coloco todo en el h1.
+      para poder dar estilos diferentes a los dos textos 
+      utilizo dos etiquetas span con diferentes clases,
+      titulo y descripcion 
+  */
+  display: block;
+  font-family: roboto;
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+}
+.paralax .wellcome h1 .descripcion {
+  font-family: roboto;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 1%;
+  text-align: center;
+}
+
+/* Fin seccion inicio */
+/* Seccion Nosotros */
+.nosotros-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding-bottom: 20%;
+}
+.nosotros-container .nosotros-titulo {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10%;
+}
+.nosotros-container .nosotros-titulo h2 {
+  font-family: "Mohave", sans-serif;
+  font-size: 3rem;
+  color: #929497;
+  border-top: #f58634 solid 2px;
+  border-bottom: #f58634 solid 2px;
+  width: 80%;
+  /* Es el 80% del contenedor padre*/
+  text-align: center;
+}
+.nosotros-container .nosotros-titulo p {
+  font-family: "Mohave", sans-serif;
+  font-size: 1.3rem;
+  color: #929497;
+  text-align: center;
+  margin-top: 2%;
+}
+.nosotros-container .nosotros-items-container {
+  width: 90%;
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  /* Espacio entre celdas*/
+}
+@media only screen and (max-width: 1024px) {
+  .nosotros-container .nosotros-items-container {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nosotros-container .nosotros-items-container {
+    /* Telefono */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .nosotros-container .nosotros-items-container .nosotros-titulo h2 {
+    font-size: 2rem;
+  }
+}
+.nosotros-container .nosotros-items-container .nosotros-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1%;
+  border-bottom: #f58634 solid 1px;
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+.nosotros-container .nosotros-items-container .nosotros-item h3 {
+  font-family: "Mohave", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #f58634;
+  border-top: #929497 solid 1px;
+  border-bottom: #929497 solid 1px;
+  margin-bottom: 5%;
+  width: 100%;
+}
+.nosotros-container .nosotros-items-container .nosotros-item p {
+  font-family: "Mohave", sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  color: #929497;
+}
+
+/* Fin seccion Nosotros */
+/* Seccion Soluciones */
+.soluciones-container {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.soluciones-container h2 {
+  font-family: "Mohave", sans-serif;
+  font-size: 3rem;
+  color: #929497;
+  text-align: center;
+  padding-top: 5%;
+}
+@media only screen and (max-width: 1024px) {
+  .soluciones-container h2 {
+    font-size: 2rem;
+  }
+}
+.soluciones-container .soluciones-items-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 1024px) {
+  .soluciones-container .soluciones-items-container {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .soluciones-container .soluciones-items-container {
+    /* Teléfono */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+.soluciones-container .soluciones-items-container .soluciones-item-1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 1024px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-1 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-1 {
+    /* Teléfono */
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+.soluciones-container .soluciones-items-container .soluciones-item-2 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+@media only screen and (max-width: 1024px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-2 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-2 {
+    /* Teléfono */
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+.soluciones-container .soluciones-items-container .soluciones-item-3 {
+  grid-row: 1/2;
+  grid-column: 5/6;
+}
+@media only screen and (max-width: 1024px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-3 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-3 {
+    /* Teléfono */
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+.soluciones-container .soluciones-items-container .soluciones-item-4 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+@media only screen and (max-width: 1024px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-4 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-4 {
+    /* Teléfono */
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+}
+.soluciones-container .soluciones-items-container .soluciones-item-5 {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+@media only screen and (max-width: 1024px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-5 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .soluciones-container .soluciones-items-container .soluciones-item-5 {
+    /* Teléfono */
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+}
+.soluciones-container .soluciones-items-container .soluciones-item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.soluciones-container .soluciones-items-container .soluciones-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 3%;
+}
+.soluciones-container .soluciones-items-container .soluciones-item p {
+  font-family: "Mohave", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #929497;
+}
+
+/* Fin seccion Soluciones */
+/* Seccion ultimos proyectos */
+.ultimos-proyectos-container {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 10%;
+}
+.ultimos-proyectos-container h2 {
+  font-family: "Mohave", sans-serif;
+  font-size: 3rem;
+  color: #929497;
+  text-align: center;
+  margin-top: 5%;
+}
+@media only screen and (max-width: 768px) {
+  .ultimos-proyectos-container h2 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    font-size: 2.5rem;
+  }
+}
+.ultimos-proyectos-container .ultimos-proyectos-items-container {
+  width: 90%;
+  margin-top: 7%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media only screen and (max-width: 1024px) {
+  .ultimos-proyectos-container .ultimos-proyectos-items-container {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+.ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item-1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 1024px) {
+  .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item-1 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+.ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item-2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+@media only screen and (max-width: 1024px) {
+  .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item-2 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+.ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item-3 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+@media only screen and (max-width: 1024px) {
+  .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item-3 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+.ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item img {
+  width: 350px;
+  height: 250px;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+.ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item p {
+  font-family: "Mohave", sans-serif;
+  font-size: 1rem;
+  color: #929497;
+  text-align: center;
+  margin-top: 1rem;
+  width: 350px;
+}
+
+/* Fin seccion ultimos proyectos */
+/* Seccion Clientes */
+.clientes-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+.clientes-container h2 {
+  font-family: "Mohave", sans-serif;
+  font-size: 3rem;
+  color: #929497;
+  text-align: center;
+  padding: 5% 0;
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container h2 {
+    font-size: 2.5rem;
+  }
+}
+.clientes-container .clientes-items-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  justify-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-1 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-1 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-2 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-2 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-3 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-3 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-3 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-4 {
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-4 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-4 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-5 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-5 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-5 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-6 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-6 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-6 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 6/7;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-7 {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-7 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-7 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 7/8;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-8 {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-8 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-8 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 8/9;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item-9 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+@media only screen and (max-width: 1024px) {
+  .clientes-container .clientes-items-container .clientes-item-9 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Tablet */
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .clientes-container .clientes-items-container .clientes-item-9 {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* Telefono */
+    grid-row: 9/10;
+    grid-column: 1/2;
+  }
+}
+.clientes-container .clientes-items-container .clientes-item img {
+  width: 150px;
+  height: 80px;
+}
+
+/* Fin seccion Clientes */
+/* Seccion Contacto */
+.contacto-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3%;
+}
+.contacto-container h2 {
+  font-family: "Mohave", sans-serif;
+  font-size: 3rem;
+  color: #929497;
+  text-align: center;
+  margin-top: 2%;
+}
+@media only screen and (max-width: 768px) {
+  .contacto-container h2 {
+    font-size: 2.5rem;
+  }
+}
+.contacto-container .contacto-form-container {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 3%;
+}
+.contacto-container .contacto-form-container .contacto-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-bottom: #929497 solid 2px;
+  padding-bottom: 1%;
+}
+.contacto-container .contacto-form-container .contacto-info img {
+  width: 300px;
+  height: 80px;
+  margin-bottom: 1%;
+}
+@media only screen and (max-width: 768px) {
+  .contacto-container .contacto-form-container .contacto-info img {
+    width: 212px;
+    height: 59px;
+  }
+}
+.contacto-container .contacto-form-container .contacto-info p {
+  font-family: "Mohave", sans-serif;
+  font-size: 1rem;
+}
+.contacto-container .contacto-form-container .contacto-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2% 0;
+}
+.contacto-container .contacto-form-container .contacto-form input {
+  margin: 1% 0;
+  font-family: "Mohave", sans-serif;
+  font-size: 1rem;
+  height: 30px;
+  border: solid #f58634 2px;
+  color: black;
+}
+.contacto-container .contacto-form-container .contacto-form textarea {
+  margin: 1% 0;
+  font-family: "Mohave", sans-serif;
+  font-size: 1rem;
+  height: 100px;
+  border: solid #f58634 2px;
+  color: black;
+}
+
+/* Fin seccion Contacto */
+/* Footer */
+.footer {
+  height: 100px;
+  width: 100%;
+  font-family: "Mohave", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333333;
+  border-top: solid #f58634 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.footer .footer-texto {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 494px) {
+  .footer .footer-texto {
+    justify-content: center;
+  }
+}
+
+/* Fin Footer */
+
+/*# sourceMappingURL=main.css.map */

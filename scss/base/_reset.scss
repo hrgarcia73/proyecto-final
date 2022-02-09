@@ -1,0 +1,14 @@
+/*
+    En este partial se realizan los resets de los estilos por
+    defecto
+*/
+
+/* Reset de valores predeterminados */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Elimino los scrollbar*/
+::-webkit-scrollbar{
+    display: none;
+}
