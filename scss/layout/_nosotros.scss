@@ -16,6 +16,12 @@
         align-items: center;
         flex-direction: column;
         padding-top: 10%;
+        @media only screen and (max-width: 700px) {    
+            width: 80%;
+        } 
+        @media only screen and (max-width: 400px) {    
+            width: 100%;
+        } 
 
         h2{
             font-family: $font-sections;
@@ -25,6 +31,14 @@
             border-bottom: #f58634 solid 2px ;
             width: 80%; /* Es el 80% del contenedor padre*/
             text-align: center;
+            @media only screen and (max-width: 700px) {    
+                font-size: 2.5rem;
+                width: 100%;
+            } 
+            @media only screen and (max-width: 400px) {    
+                font-size: 2rem;
+                width: 100%;
+            } 
         }
         p{
             font-family: $font-sections;
@@ -54,10 +68,6 @@
             /* Telefono */
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(3,1fr);
-
-            .nosotros-titulo h2{
-                font-size: 2rem;
-            }
         } 
 
         .nosotros-item{
@@ -71,7 +81,6 @@
             border-bottom: #f58634 solid 1px;
             padding-bottom: 1%;
             padding-top: 3%;
-
             h3{
                 font-family: $font-sections;
                 font-size: 1.5rem;

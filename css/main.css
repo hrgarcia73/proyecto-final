@@ -45,6 +45,14 @@ Se utilizó:
   display: none;
 }
 
+html {
+  width: 100%;
+}
+
+body {
+  min-width: 100%;
+}
+
 /*
     Definicion de funetes del proyecto
 */
@@ -102,7 +110,6 @@ html {
   /* con esto conseguí que se ponga el menú al lado del logo */
   align-items: center;
   /* Con esto consigo que se centren*/
-  width: 100%;
 }
 .header .menu ul {
   margin: 0%;
@@ -115,7 +122,7 @@ html {
     display: flex;
     position: absolute;
     flex-direction: column;
-    top: 65px;
+    top: 60px;
     left: 0;
     background-color: #837c7c;
     opacity: 0.9;
@@ -174,7 +181,7 @@ html {
   font-size: 2rem;
   color: #f58634;
   position: fixed;
-  top: 8px;
+  top: 4px;
   left: 5px;
   /*efecto hover para el boton del menu responsive*/
   /* ajuste para baja resolucion*/
@@ -263,6 +270,16 @@ html {
   flex-direction: column;
   padding-top: 10%;
 }
+@media only screen and (max-width: 700px) {
+  .nosotros-container .nosotros-titulo {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .nosotros-container .nosotros-titulo {
+    width: 100%;
+  }
+}
 .nosotros-container .nosotros-titulo h2 {
   font-family: "Mohave", sans-serif;
   font-size: 3rem;
@@ -272,6 +289,18 @@ html {
   width: 80%;
   /* Es el 80% del contenedor padre*/
   text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .nosotros-container .nosotros-titulo h2 {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .nosotros-container .nosotros-titulo h2 {
+    font-size: 2rem;
+    width: 100%;
+  }
 }
 .nosotros-container .nosotros-titulo p {
   font-family: "Mohave", sans-serif;
@@ -301,9 +330,6 @@ html {
     /* Telefono */
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
-  }
-  .nosotros-container .nosotros-items-container .nosotros-titulo h2 {
-    font-size: 2rem;
   }
 }
 .nosotros-container .nosotros-items-container .nosotros-item {
@@ -591,13 +617,30 @@ html {
   border-bottom-left-radius: 20%;
   border-top-right-radius: 20%;
 }
+@media only screen and (max-width: 360px) {
+  .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item img {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* telefono */
+    width: 250px;
+    height: 150px;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+  }
+}
 .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item p {
   font-family: "Mohave", sans-serif;
   font-size: 1rem;
   color: #929497;
   text-align: center;
   margin-top: 1rem;
-  width: 350px;
+  width: 30%;
+}
+@media only screen and (max-width: 768px) {
+  .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item p {
+    /* Ajuste de tamaño para distintas resoluciones*/
+    /* telefono */
+    width: 100%;
+  }
 }
 
 /* Fin seccion ultimos proyectos */

@@ -28,7 +28,6 @@
     .menu{
         display: flex;  /* con esto conseguí que se ponga el menú al lado del logo */
         align-items: center; /* Con esto consigo que se centren*/
-        width: 100%;
         ul{
             margin: 0%;
             list-style: none;
@@ -39,7 +38,7 @@
                 display: flex;
                 position: absolute; 
                 flex-direction: column;
-                top:65px;
+                top:60px;
                 left: 0;
                 background-color:#837c7c;
                 opacity: 0.9;
@@ -99,7 +98,7 @@
         font-size: 2rem;
         color: #f58634;
         position: fixed;
-        top: 8px;
+        top: 4px;
         left:5px;
 
         /*efecto hover para el boton del menu responsive*/

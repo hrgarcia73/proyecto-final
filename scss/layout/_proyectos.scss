@@ -85,6 +85,15 @@
                 height: 250px;
                 border-bottom-left-radius: 20%;
                 border-top-right-radius: 20%;
+
+                @media only screen and (max-width: 360px) {
+                    /* Ajuste de tamaño para distintas resoluciones*/
+                    /* telefono */
+                    width: 250px;
+                    height: 150px;
+                    border-bottom-left-radius: 20%;
+                    border-top-right-radius: 20%;
+                }
             }
 
             p {
@@ -93,8 +102,15 @@
                 color: $text-color-descriptions;
                 text-align: center;
                 margin-top: 1rem;
-                width: 350px;
+                width: 30%;
+            
+                @media only screen and (max-width: 768px) {
+                    /* Ajuste de tamaño para distintas resoluciones*/
+                    /* telefono */
+                    width: 100%;
+                }
             }
+
         }
     }
 }
