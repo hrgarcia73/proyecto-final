@@ -46,10 +46,12 @@ Se utilizó:
 }
 
 html {
+  background-color: #fff;
   width: 100%;
 }
 
 body {
+  background-color: #fff;
   min-width: 100%;
 }
 
@@ -82,7 +84,7 @@ html {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 60px;
+  height: 65px;
   background-color: #333333;
   border-bottom: solid #f58634 5px;
   position: fixed;
@@ -94,7 +96,7 @@ html {
 .header .header-logo a {
   font-family: "Mohave", sans-serif;
   font-size: 3rem;
-  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 20px;
   text-decoration: none;
   color: #f58634;
@@ -259,8 +261,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f7f7f7;
-  padding-bottom: 20%;
+  background-color: #fff;
 }
 .nosotros-container .nosotros-titulo {
   width: 45%;
@@ -536,7 +537,6 @@ html {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 10%;
 }
 .ultimos-proyectos-container h2 {
   font-family: "Mohave", sans-serif;
@@ -633,7 +633,7 @@ html {
   color: #929497;
   text-align: center;
   margin-top: 1rem;
-  width: 30%;
+  width: 70%;
 }
 @media only screen and (max-width: 768px) {
   .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item p {
@@ -653,6 +653,7 @@ html {
   flex-direction: column;
   align-items: center;
   margin-top: 3%;
+  background-color: #fff;
 }
 .clientes-container h2 {
   font-family: "Mohave", sans-serif;
@@ -885,6 +886,7 @@ html {
   align-items: center;
   flex-direction: column;
   margin-top: 3%;
+  background-color: #fff;
 }
 .contacto-container h2 {
   font-family: "Mohave", sans-serif;
