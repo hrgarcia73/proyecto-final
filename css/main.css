@@ -215,7 +215,7 @@ html {
   */
   height: auto;
   /* Imagen de fondo*/
-  background-image: url("../src/assets/img/carrousel-1.png");
+  background-image: url("../src/assets/img/fondo-inicio.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -228,6 +228,7 @@ html {
   align-items: center;
   justify-content: center;
   padding: 30rem 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 .inicio .paralax .wellcome h1 .titulo {
   /*
@@ -653,14 +654,7 @@ html {
   color: #929497;
   text-align: center;
   margin-top: 1rem;
-  width: 70%;
-}
-@media only screen and (max-width: 768px) {
-  .ultimos-proyectos-container .ultimos-proyectos-items-container .ultimos-proyectos-item p {
-    /* Ajuste de tamaño para distintas resoluciones*/
-    /* telefono */
-    width: 100%;
-  }
+  width: 250px;
 }
 
 /* Fin seccion ultimos proyectos */

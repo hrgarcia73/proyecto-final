@@ -1,7 +1,6 @@
 
 /* Seccion inicio */
 .inicio{
-    
     .paralax{
         position: relative;
         /* 100% del ancho de la pantalla */
@@ -11,7 +10,7 @@
         */
         height: auto;
         /* Imagen de fondo*/
-        background-image: url("../src/assets/img/carrousel-1.png");
+        background-image: url("../src/assets/img/fondo-inicio.png");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -24,7 +23,7 @@
             align-items: center;
             justify-content: center;
             padding: 30rem 0;
-
+            background: rgba(0,0,0,0.5);
             h1{
                 .titulo{
                 /*
