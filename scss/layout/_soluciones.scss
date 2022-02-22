@@ -19,7 +19,7 @@
     .soluciones-items-container{
         width: 90%;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(2,1fr);
     
         grid-column-gap: 10px;
@@ -32,14 +32,14 @@
         @media only screen and (max-width: 1024px) {
             /* Ajuste de tamaño para distintas resoluciones*/
             /* Tablet */
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3,1fr);
         }
         
         @media only screen and (max-width: 768px) {
             /* Teléfono */
             grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(5,1fr);
+            grid-template-rows: repeat(6,1fr);
         }
 
         .soluciones-item-1{
@@ -59,12 +59,12 @@
         }
         .soluciones-item-2{
             grid-row: 1 / 2;
-            grid-column: 3 / 4;
+            grid-column: 2 / 3;
             @media only screen and (max-width: 1024px) {
                 /* Ajuste de tamaño para distintas resoluciones*/
                 /* Tablet */
                 grid-row: 1 / 2;
-                grid-column: 3 / 4;
+                grid-column: 2 / 3;
             }
             @media only screen and (max-width: 768px) {
                 /* Teléfono */
@@ -74,7 +74,7 @@
         }
         .soluciones-item-3{
             grid-row: 1 / 2;
-            grid-column: 5 / 6;
+            grid-column: 3 / 4;
             @media only screen and (max-width: 1024px) {
                 /* Ajuste de tamaño para distintas resoluciones*/
                 /* Tablet */
@@ -90,12 +90,12 @@
         
         .soluciones-item-4{
             grid-row: 2 / 3;
-            grid-column: 2 / 3;
+            grid-column: 1 / 2;
             @media only screen and (max-width: 1024px) {
                 /* Ajuste de tamaño para distintas resoluciones*/
                 /* Tablet */
                 grid-row: 2 / 3;
-                grid-column: 3 / 4;
+                grid-column: 2 / 3;
             }
             @media only screen and (max-width: 768px) {
                 /* Teléfono */
@@ -105,7 +105,22 @@
         }
         .soluciones-item-5{
             grid-row: 2 / 3;
-            grid-column: 4 / 5;
+            grid-column: 2 / 3;
+            @media only screen and (max-width: 1024px) {
+                /* Ajuste de tamaño para distintas resoluciones*/
+                /* Tablet */
+                grid-row: 3 / 4;
+                grid-column: 1 / 2;
+            }
+            @media only screen and (max-width: 768px) {
+                /* Teléfono */
+                grid-row: 5 / 6;
+                grid-column: 1 / 2;
+            }
+        }
+        .soluciones-item-6{
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
             @media only screen and (max-width: 1024px) {
                 /* Ajuste de tamaño para distintas resoluciones*/
                 /* Tablet */
@@ -114,7 +129,7 @@
             }
             @media only screen and (max-width: 768px) {
                 /* Teléfono */
-                grid-row: 5 / 6;
+                grid-row: 6 / 7;
                 grid-column: 1 / 2;
             }
         }

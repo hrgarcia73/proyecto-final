@@ -7,7 +7,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 3%;
-    //background-color: #f7f7f7;
     background-color: #fff;
 
     h2{
@@ -29,8 +28,7 @@
         grid-template-rows: repeat(4,1fr);
         grid-column-gap: 10px;
         grid-row-gap: 30px; 
-        margin-top: 4%;
-        margin-bottom: 4%;
+        margin-top: 1%;
         justify-items: center;
         @media only screen and (max-width: 1024px) {
             /* Ajuste de tamaño para distintas resoluciones*/
@@ -190,7 +188,7 @@
         .clientes-item{
             img{
                 width: 150px;
-                height: 80px; 
+                height: 110px;
             }
 
         }
