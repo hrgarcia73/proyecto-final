@@ -78,6 +78,13 @@
                 border: solid  #f58634 2px;
                 color: black;
             }
+            #boton{
+                
+                &:hover{
+                    cursor: pointer;
+                }
+            
+            }
         }
     }
 }

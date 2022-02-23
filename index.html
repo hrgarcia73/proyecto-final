@@ -171,7 +171,7 @@
                             Programación de PLC, HMI y SCADA
                         </p>
                     </div>
-                    <!-- Programación de PLC, HMI y SCADA -->
+                    <!-- Integracion de procesos -->
                     <div class="soluciones-item soluciones-item-6">
                         <img src="./src/assets/img/integracion-procesos.jpg"
                             alt="Soluciones tecnológicas. Integración de procesos">
@@ -285,11 +285,13 @@
                     <p><strong>email:</strong> info@novaware.com.ar</p>
                     <p><strong>cel:</strong>+5492323578823</p>
                 </div>
-                <form class="contacto-form" action="" method="post">
-                    <input class="contacto-form-nombre" name="name" type="text" placeholder="Ingrese su nombre">
-                    <input class="contacto-form-email" name="email" type="text" placeholder="Ingrese su email">
-                    <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <input type="submit" value="Enviar">
+                <form class="contacto-form" action="enviar.php" method="post">
+                    <input class="contacto-form-nombre" name="name" type="text" 
+                            placeholder="Ingrese su nombre" required>
+                    <input class="contacto-form-email" name="email" type="text" 
+                        placeholder="Ingrese su email" required>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                    <input type="submit" value="Enviar" id="boton">
                 </form>
             </div>
         </section>

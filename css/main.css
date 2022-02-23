@@ -971,6 +971,9 @@ html {
   border: solid #f58634 2px;
   color: black;
 }
+.contacto-container .contacto-form-container .contacto-form #boton:hover {
+  cursor: pointer;
+}
 
 /* Fin seccion Contacto */
 /* Footer */
